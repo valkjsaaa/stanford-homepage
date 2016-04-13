@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>Jackie Yang's Homepage @ Stanford</title>
+  <meta name="description" content="Welcome to Jackie Yang's Homepage. You can find my projects, resume and a lot about me here.">
+
+  <link rel="canonical" href="https://jackieyang.me/">
+  <link rel="alternate" type="application/rss+xml" title="Jackie Yang's Homepage" href="https://jackieyang.me/feed.xml" />
+
+  <!-- Material Design Lite css Library -->
+  <link rel="stylesheet" href="https://code.getmdl.io/1.1.3/material.indigo-pink.min.css">
+
+  <!-- Material Design Fonts -->
+  <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+
+  <style type="text/css">
+    body, html
+    {
+        margin: 0; padding: 0; height: 100%; overflow: hidden;
+    }
+
+    #content
+    {
+        position:absolute; left: 0; right: 0; bottom: 0; top: 0px;
+    }
+  </style>
+
+</head>
+
+  <body>
+    <div id="snackbar-container" class="mdl-js-snackbar mdl-snackbar">
+      <div class="mdl-snackbar__text"></div>
+      <button class="mdl-snackbar__action" type="button"></button>
+    </div>
+    <iframe src="https://jackieyang.me" height="100%" width="100%" onload="showHomepageUrl()"></iframe>
+    <!-- jQuery -->
+    <script src="https://code.jquery.com/jquery-1.12.3.min.js" integrity="sha256-aaODHAgvwQW1bFOGXMeX+pC4PZIPsvn2h1sArYOhgXQ=" crossorigin="anonymous"></script>
+    <!-- Material Design Lite js Library -->
+    <script defer src="https://code.getmdl.io/1.1.3/material.min.js"></script>
+    <script>
+      function showHomepageUrl() {
+        var handler = function(event) {
+          window.location.href = 'https://jackieyang.me';
+        };
+        $(window).load(function () {
+          var body = document.querySelector("#snackbar-container");
+          body.MaterialSnackbar.showSnackbar({
+            message: 'You should try https://jackieyang.me',
+            actionHandler: handler,
+            actionText: 'Go'
+          });
+        });
+      }
+    </script>
+  </body>
+
+</html>
